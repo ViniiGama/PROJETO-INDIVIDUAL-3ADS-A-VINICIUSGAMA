@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px clamp(20px, 5vw, 64px);
+  border-bottom: 1px solid rgba(255, 106, 0, 0.15);
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoMark {
+  width: 14px;
+  height: 32px;
+  background: var(--orange);
+  transform: rotate(-12deg);
+  box-shadow: 0 0 14px rgba(255, 106, 0, 0.6);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.statusPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--cyan-soft);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+  flex-shrink: 0;
+}

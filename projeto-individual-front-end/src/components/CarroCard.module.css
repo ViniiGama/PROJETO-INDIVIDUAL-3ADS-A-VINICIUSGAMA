@@ -1,0 +1,112 @@
+.carCard {
+  background: var(--card);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.carPhoto {
+  position: relative;
+  height: 90px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.35), rgba(0, 32, 48, 0.92));
+}
+
+.carPhotoTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.categoryBadge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--cyan);
+  background: rgba(7, 7, 10, 0.7);
+  border: 1px solid rgba(0, 229, 255, 0.6);
+  border-radius: 999px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+.iconRow {
+  display: flex;
+  gap: 6px;
+}
+
+.iconBtn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: rgba(7, 7, 10, 0.7);
+  cursor: pointer;
+  padding: 0;
+}
+
+.iconBtnEdit {
+  border: 1px solid rgba(0, 229, 255, 0.5);
+  color: var(--cyan);
+}
+.iconBtnEdit:hover { background: rgba(0, 229, 255, 0.15); }
+
+.iconBtnDelete {
+  border: 1px solid rgba(255, 82, 82, 0.5);
+  color: #ff5252;
+}
+.iconBtnDelete:hover { background: rgba(255, 82, 82, 0.15); }
+
+.carContent {
+  padding: 12px 14px 14px;
+}
+
+.carName {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 19px;
+  letter-spacing: 0.5px;
+  color: var(--orange);
+  margin: 0 0 2px;
+}
+
+.carModel {
+  font-size: 12px;
+  color: #bfc1c9;
+  margin: 0 0 10px;
+}
+
+.thinDivider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 10px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 10px;
+}
+
+.statLabel {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #8c8d94;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+}
+
+.statValue {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ebecf0;
+  margin: 0;
+}

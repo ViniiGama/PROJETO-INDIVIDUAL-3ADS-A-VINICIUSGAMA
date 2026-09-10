@@ -1,0 +1,131 @@
+.formCard {
+  width: 100%;
+  max-width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 106, 0, 0.25);
+  /* sem box-shadow/glow de propósito */
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eyebrowOrange {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  color: var(--orange);
+  margin: 0;
+}
+
+.cardTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+.dividerAccent {
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--cyan);
+  display: block;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  min-width: 0;
+}
+
+.field input::placeholder {
+  color: #6c6d78;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--cyan);
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  flex: 1 1 160px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--orange);
+  color: var(--bg);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  /* sem box-shadow/glow de propósito */
+}
+.ctaButton:hover { opacity: 0.9; }
+.ctaButton:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.ctaButtonSecondary {
+  flex: 0 1 auto;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.ctaButtonSecondary:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}

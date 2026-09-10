@@ -1,0 +1,57 @@
+.cardsColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  width: 100%;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  color: var(--cyan);
+  margin: 0 0 4px;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(22px, 3vw, 30px);
+  margin: 0;
+}
+
+.countPill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--orange-soft);
+  border: 1px solid rgba(255, 106, 0, 0.5);
+  color: var(--orange);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.emptyState {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+  width: 100%;
+}

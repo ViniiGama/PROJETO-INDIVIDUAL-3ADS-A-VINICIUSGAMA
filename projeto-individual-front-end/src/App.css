@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #07070a;
+  --panel: #101014;
+  --card: #0e0e13;
+  --orange: #ff6a00;
+  --orange-soft: rgba(255, 106, 0, 0.14);
+  --cyan: #00e5ff;
+  --cyan-soft: rgba(0, 229, 255, 0.1);
+  --text: #f5f6fa;
+  --muted: #9ba0ae;
+  --border: rgba(255, 255, 255, 0.08);
+  --input-bg: #0a0a0e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.page { min-height: 100vh; }
+
+/* ---------- Header ---------- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 64px;
+  border-bottom: 1px solid rgba(255, 106, 0, 0.15);
+}
+
+.logo { display: flex; align-items: center; gap: 12px; }
+
+.logo-mark {
+  width: 14px;
+  height: 32px;
+  background: var(--orange);
+  transform: rotate(-12deg);
+  box-shadow: 0 0 14px rgba(255, 106, 0, 0.6);
+  display: inline-block;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--cyan-soft);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: var(--cyan);
+}
+
+.status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 64px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+.glow--orange { width: 500px; height: 500px; left: -180px; top: -280px; background: var(--orange); opacity: 0.35; }
+.glow--cyan { width: 560px; height: 560px; right: -220px; top: -320px; background: var(--cyan); opacity: 0.28; }
+
+.streak {
+  position: absolute;
+  height: 2px;
+  border-radius: 2px;
+  transform-origin: left center;
+}
+.streak--1 { width: 900px; top: 60px; left: 200px; background: var(--orange); opacity: 0.5; transform: rotate(-8deg); }
+.streak--2 { width: 700px; top: 90px; left: 260px; background: var(--cyan); opacity: 0.35; transform: rotate(-8deg); }
+.streak--3 { width: 500px; top: 40px; left: 900px; background: #fff; opacity: 0.15; transform: rotate(-8deg); }
+
+.hero-content { position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  margin: 0 0 4px;
+}
+.eyebrow--orange { color: var(--orange); }
+.eyebrow--cyan { color: var(--cyan); }
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 44px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ---------- Banner (feedback messages) ---------- */
+.banner {
+  margin: 0 64px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.banner--erro { background: rgba(255, 82, 82, 0.12); border: 1px solid rgba(255, 82, 82, 0.4); color: #ff8a8a; }
+.banner--sucesso { background: rgba(0, 229, 255, 0.1); border: 1px solid rgba(0, 229, 255, 0.4); color: var(--cyan); }
+
+/* ---------- Main content layout ---------- */
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 32px 64px 80px;
+}
+
+/* ---------- Form card ---------- */
+.form-card {
+  width: 420px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 106, 0, 0.25);
+  box-shadow: 0 8px 40px rgba(255, 106, 0, 0.12);
+}
+
+.title-block { display: flex; flex-direction: column; gap: 4px; }
+
+.card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+.divider-accent {
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--cyan);
+  display: block;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.field-row { display: flex; gap: 16px; }
+
+.field label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.field input::placeholder { color: #6c6d78; }
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.15);
+}
+
+.form-actions { display: flex; gap: 12px; }
+
+.cta-button {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--orange);
+  color: var(--bg);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(255, 106, 0, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta-button:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255, 106, 0, 0.55); }
+.cta-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.cta-button-secondary {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.cta-button-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* ---------- Cards column ---------- */
+.cards-column { flex: 1; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+
+.cards-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--orange-soft);
+  border: 1px solid rgba(255, 106, 0, 0.5);
+  color: var(--orange);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.empty-state { color: var(--muted); font-size: 14px; }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Car card ---------- */
+.car-card {
+  background: var(--card);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.car-photo {
+  position: relative;
+  height: 140px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.35), rgba(0, 32, 48, 0.92));
+  overflow: hidden;
+}
+
+.car-photo-top { display: flex; align-items: flex-start; justify-content: space-between; z-index: 1; }
+
+.category-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--cyan);
+  background: rgba(7, 7, 10, 0.7);
+  border: 1px solid rgba(0, 229, 255, 0.6);
+  border-radius: 999px;
+  padding: 5px 12px;
+  text-transform: uppercase;
+}
+
+.icon-row { display: flex; gap: 8px; }
+
+.icon-btn {
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  background: rgba(7, 7, 10, 0.7);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.icon-btn--edit { border: 1px solid rgba(0, 229, 255, 0.5); color: var(--cyan); }
+.icon-btn--edit:hover { background: rgba(0, 229, 255, 0.15); }
+.icon-btn--delete { border: 1px solid rgba(255, 82, 82, 0.5); color: #ff5252; }
+.icon-btn--delete:hover { background: rgba(255, 82, 82, 0.15); }
+
+.car-watermark {
+  position: absolute;
+  right: -8px;
+  bottom: -18px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  color: rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.car-content { padding: 18px 20px 20px; }
+
+.car-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  color: var(--orange);
+  margin: 0 0 2px;
+}
+
+.car-model { font-size: 14px; color: #bfc1c9; margin: 0 0 14px; }
+
+.thin-divider { height: 1px; background: var(--border); margin-bottom: 14px; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px;
+  column-gap: 16px;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #8c8d94;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+}
+
+.stat-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ebecf0;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .main-content { flex-direction: column; }
+  .form-card { width: 100%; }
+  .header, .hero, .main-content { padding-left: 24px; padding-right: 24px; }
+}

@@ -1,0 +1,39 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  margin: 0 clamp(20px, 5vw, 64px);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.bannerErro {
+  background: rgba(255, 82, 82, 0.12);
+  border: 1px solid rgba(255, 82, 82, 0.4);
+  color: #ff8a8a;
+}
+.bannerSucesso {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  color: var(--cyan);
+}
+
+.mainContent {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(20px, 3vw, 40px);
+  padding: clamp(20px, 4vw, 32px) clamp(20px, 5vw, 64px) 80px;
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .mainContent {
+    flex-direction: column;
+  }
+}
